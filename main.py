@@ -1,8 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-def get_driver():
-    
+def get_driver():   
     """get_diver code"""
 
     options = webdriver.ChromeOptions()
@@ -17,8 +16,9 @@ def get_driver():
     return driver
 
 def main():
+    """main function"""
     driver = get_driver()
-    element = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div/div")  # Usando By.XPATH
-    return element.text  # Devuelve el texto del elemento
+    element = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div/div")
+    return element.text
 
 print(main())
